@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Top Up Fortnite V-Bucks | Max Store</title>
+  <link rel="stylesheet" href="StyleHtmlGw.css">
+</head>
+<body class="transaction-page">
+  <header class="transaction-header">
+    <div class="transaction-header__inner">
+      <a class="brand" href="Toko.html">
+        <span class="brand-mark">Z</span>
+        <span>Max<span class="brand-accent">Store</span></span>
+      </a>
+      <nav class="transaction-nav">
+        <a href="#top-up">Top Up</a>
+        <a href="#cara-order">Cara Order</a>
+        <a href="#bantuan">Bantuan</a>
+      </nav>
+      <div class="header-actions">
+        <a class="back-store" href="Toko.html">← Kembali ke Toko</a>
+        <span class="secure-badge">Transaksi aman</span>
+      </div>
+    </div>
+  </header>
+
+  <main id="transaksi" class="transaction-main">
+    <section class="game-hero">
+      <img class="game-hero__image" src="bahan/Foto/fortnite.jpg" alt="Fortnite">
+      <div class="game-hero__overlay"></div>
+      <div class="game-hero__content">
+        <p class="section-kicker">TOP UP GAME</p>
+        <h1>Fortnite V-Bucks</h1>
+        <p>Top up V-Bucks dengan pilihan nominal jelas dan konfirmasi pesanan lewat WhatsApp.</p>
+        <div class="hero-meta">
+          <span>⚡ Proses 1-3 menit</span>
+          <span>✓ Tanpa login akun</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="transaction-layout">
+      <form id="topup-form" class="transaction-form">
+        <section class="step-panel" id="cara-order">
+          <div class="step-heading">
+            <span class="step-number">01</span>
+            <div>
+              <p class="section-kicker">LANGKAH PERTAMA</p>
+              <h2>Data akun Fortnite</h2>
+            </div>
+          </div>
+          <p class="step-help">Masukkan Epic Games Display Name yang terhubung ke akun Fortnite kamu.</p>
+          <label class="form-field">
+            <span>Epic Games Display Name</span>
+            <input id="epic-id" type="text" autocomplete="username" placeholder="Contoh: NamaPemain" required>
+            <small>Pastikan nama akun benar. Password akun tidak diperlukan.</small>
+          </label>
+          <button class="check-nickname" type="button" id="check-epic-id">✦ Cek Data Akun</button>
+          <div id="epic-id-result" class="nickname-result" aria-live="polite">
+            <span class="nickname-icon">?</span>
+            <span>Data akun akan ditampilkan setelah dicek.</span>
+          </div>
+        </section>
+
+        <section class="step-panel" id="top-up">
+          <div class="step-heading">
+            <span class="step-number">02</span>
+            <div>
+              <p class="section-kicker">LANGKAH KEDUA</p>
+              <h2>Pilih nominal V-Bucks</h2>
+            </div>
+          </div>
+          <p class="step-help">Patokan V-Bucks: 800 V-Bucks = Rp 80.000. Harga Fortnite Crew 190 ribu rupiah.</p>
+          <div class="category-tabs">
+            <button type="button" class="category-tab is-active" data-category="vbucks">V-Bucks</button>
+            <button type="button" class="category-tab" data-category="crew">★ Fortnite Crew</button>
+          </div>
+          <div class="nominal-grid" id="nominal-grid"></div>
+        </section>
+
+        <section class="step-panel">
+          <div class="step-heading">
+            <span class="step-number">03</span>
+            <div>
+              <p class="section-kicker">LANGKAH KETIGA</p>
+              <h2>Metode pembayaran</h2>
+            </div>
+          </div>
+          <div class="payment-grid">
+            <label class="payment-card is-selected"><input type="radio" name="payment" value="QRIS" data-fee="1000" checked><span class="payment-logo qris">QR</span><span><strong>QRIS</strong><small>Scan semua e-wallet</small></span><i>✓</i></label>
+            <label class="payment-card"><input type="radio" name="payment" value="DANA" data-fee="1500"><span class="payment-logo dana">D</span><span><strong>DANA</strong><small>Saldo DANA</small></span><i>✓</i></label>
+            <label class="payment-card"><input type="radio" name="payment" value="GoPay" data-fee="1500"><span class="payment-logo gopay">G</span><span><strong>GoPay</strong><small>Saldo GoPay</small></span><i>✓</i></label>
+            <label class="payment-card"><input type="radio" name="payment" value="Transfer Bank" data-fee="2500"><span class="payment-logo bank">⌁</span><span><strong>Transfer Bank</strong><small>BNI, BRI, Mandiri</small></span><i>✓</i></label>
+            <label class="payment-card"><input type="radio" name="payment" value="Minimarket" data-fee="3000"><span class="payment-logo mini">M</span><span><strong>Minimarket</strong><small>Alfamart / Indomaret</small></span><i>✓</i></label>
+          </div>
+          <div class="price-summary">
+            <span>Harga item <strong id="item-price">Rp 80.000</strong></span>
+            <span>Biaya admin <strong id="admin-fee">Rp 1.000</strong></span>
+            <span class="price-total">Total pembayaran <strong id="total-price">Rp 81.000</strong></span>
+          </div>
+        </section>
+
+        <section class="step-panel">
+          <div class="step-heading">
+            <span class="step-number">04</span>
+            <div>
+              <p class="section-kicker">LANGKAH KEEMPAT</p>
+              <h2>Konfirmasi pesanan</h2>
+            </div>
+          </div>
+          <label class="form-field">
+            <span>Nomor WhatsApp</span>
+            <input id="whatsapp" type="tel" inputmode="tel" placeholder="08xxxxxxxxxx" required>
+            <small>Konfirmasi pesanan dan status top up dikirim ke nomor ini.</small>
+          </label>
+          <button class="buy-button" type="submit">
+            <span>Beli Sekarang</span>
+            <strong id="button-price">Rp 81.000</strong>
+            <b>→</b>
+          </button>
+          <p class="secure-note">🔒 Jangan pernah membagikan password atau kode keamanan Epic Games.</p>
+        </section>
+      </form>
+
+      <aside class="order-aside">
+        <div class="aside-card">
+          <p class="section-kicker">PESANAN KAMU</p>
+          <h2>Fortnite</h2>
+          <div class="aside-line"><span>Item</span><strong id="aside-item">800 V-Bucks</strong></div>
+          <div class="aside-line"><span>Harga item</span><strong id="aside-price">Rp 80.000</strong></div>
+          <div class="aside-line"><span>Pajak / biaya admin</span><strong id="aside-tax">Rp 1.000</strong></div>
+          <div class="aside-line"><span>Epic ID</span><strong id="aside-account">Belum diisi</strong></div>
+          <div class="aside-line"><span>Pembayaran</span><strong id="aside-payment">QRIS</strong></div>
+          <div class="aside-total"><span>Total</span><strong id="aside-total">Rp 81.000</strong></div>
+        </div>
+        <div class="trust-list">
+          <div><span>✓</span><p><strong>Proses cepat</strong><small>Pesanan diproses 24 jam</small></p></div>
+          <div><span>✓</span><p><strong>Harga transparan</strong><small>Total ditampilkan sebelum konfirmasi</small></p></div>
+          <div><span>✓</span><p><strong>Customer support</strong><small>Siap membantu via WhatsApp</small></p></div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer id="bantuan" class="transaction-footer">
+    <p>© 2026 Max Store</p>
+    <a href="https://wa.me/628123456789" target="_blank" rel="noreferrer">Butuh bantuan? Chat WhatsApp →</a>
+  </footer>
+
+  <div class="modal-backdrop" id="order-modal" hidden>
+    <div class="order-modal" role="dialog" aria-modal="true">
+      <button class="modal-close" type="button" aria-label="Tutup">×</button>
+      <div class="modal-check">✓</div>
+      <p class="section-kicker">PESANAN SIAP DIPROSES</p>
+      <h2>Cek kembali pesananmu</h2>
+      <div class="modal-details">
+        <div><span>Epic ID</span><strong id="modal-account"></strong></div>
+        <div><span>Item</span><strong id="modal-item"></strong></div>
+        <div><span>Pembayaran</span><strong id="modal-payment"></strong></div>
+        <div><span>Total</span><strong id="modal-total"></strong></div>
+      </div>
+      <a id="whatsapp-link" class="modal-action" href="#" target="_blank" rel="noreferrer">Lanjut ke WhatsApp <span>→</span></a>
+      <p class="modal-note">Kamu akan diarahkan ke WhatsApp untuk menyelesaikan pembayaran.</p>
+    </div>
+  </div>
+
+  <script>
+    const daftarProduk = {
+      vbucks: [
+        { nama: '800 V-Bucks', harga: 80000 },
+        { nama: '2.800 V-Bucks', harga: 280000 },
+        { nama: '5.000 V-Bucks', harga: 500000 },
+        { nama: '13.500 V-Bucks', harga: 1350000 }
+      ],
+      crew: [
+        { nama: 'Fortnite Crew (1 bulan)', harga: 190000 }
+      ]
+    };
+
+    let produkTerpilih = daftarProduk.vbucks[0];
+    const daftarNominal = document.querySelector('#nominal-grid');
+
+    function formatRupiah(jumlah) {
+      return new Intl.NumberFormat('id-ID', {
+        style: 'currency',
+        currency: 'IDR',
+        maximumFractionDigits: 0
+      }).format(jumlah).replace('IDR', 'Rp');
+    }
+
+    function perbaruiRingkasan() {
+      const pembayaran = document.querySelector('input[name="payment"]:checked');
+      const biayaAdmin = Number(pembayaran.dataset.fee);
+      const total = produkTerpilih.harga + biayaAdmin;
+
+      document.querySelector('#item-price').textContent = formatRupiah(produkTerpilih.harga);
+      document.querySelector('#admin-fee').textContent = formatRupiah(biayaAdmin);
+      document.querySelector('#total-price').textContent = formatRupiah(total);
+      document.querySelector('#button-price').textContent = formatRupiah(total);
+      document.querySelector('#aside-item').textContent = produkTerpilih.nama;
+      document.querySelector('#aside-price').textContent = formatRupiah(produkTerpilih.harga);
+      document.querySelector('#aside-tax').textContent = formatRupiah(biayaAdmin);
+      document.querySelector('#aside-payment').textContent = pembayaran.value;
+      document.querySelector('#aside-total').textContent = formatRupiah(total);
+    }
+
+    function tampilkanNominal(kategori) {
+      const produk = daftarProduk[kategori];
+
+      daftarNominal.innerHTML = produk.map((item, index) => `
+        <button type="button" class="nominal-card ${index ? '' : 'is-selected'}">
+          ${kategori === 'vbucks' ? '<img class="nominal-card__image" src="bahan/Foto/vbuck.jpg" alt="V-Bucks Fortnite">' : '<img class="nominal-card__image" src="bahan/Foto/fortnitecrew.jpg" alt="Fortnite Crew">'}
+          <span>
+            <strong>${item.nama}</strong>
+            <small>${kategori === 'crew' ? 'Langganan bulanan' : (index ? 'Top up V-Bucks' : 'Paling populer')}</small>
+          </span>
+          <b>${formatRupiah(item.harga)}</b>
+        </button>
+      `).join('');
+
+      produkTerpilih = produk[0];
+      perbaruiRingkasan();
+
+      daftarNominal.querySelectorAll('.nominal-card').forEach((kartu, index) => {
+        kartu.addEventListener('click', () => {
+          daftarNominal.querySelector('.is-selected').classList.remove('is-selected');
+          kartu.classList.add('is-selected');
+          produkTerpilih = produk[index];
+          perbaruiRingkasan();
+        });
+      });
+    }
+
+    tampilkanNominal('vbucks');
+
+    document.querySelectorAll('.category-tab').forEach((tab) => {
+      tab.addEventListener('click', () => {
+        document.querySelector('.category-tab.is-active').classList.remove('is-active');
+        tab.classList.add('is-active');
+        tampilkanNominal(tab.dataset.category);
+      });
+    });
+
+    document.querySelectorAll('.payment-card').forEach((card) => {
+      card.addEventListener('click', () => {
+        document.querySelector('.payment-card.is-selected').classList.remove('is-selected');
+        card.classList.add('is-selected');
+        perbaruiRingkasan();
+      });
+    });
+
+    document.querySelector('#check-epic-id').addEventListener('click', () => {
+      const epicId = document.querySelector('#epic-id').value.trim();
+      const result = document.querySelector('#epic-id-result');
+
+      if (!epicId) {
+        result.className = 'nickname-result is-error';
+        result.replaceChildren();
+
+        const ikonError = document.createElement('span');
+        ikonError.className = 'nickname-icon';
+        ikonError.textContent = '!';
+
+        const pesanError = document.createElement('span');
+        pesanError.textContent = 'Isi Epic Games Display Name terlebih dahulu.';
+        result.append(ikonError, pesanError);
+        return;
+      }
+
+      result.className = 'nickname-result is-found';
+      const ikon = document.createElement('span');
+      ikon.className = 'nickname-icon';
+      ikon.textContent = '✓';
+
+      const pesan = document.createElement('span');
+      pesan.append('Epic Games ID untuk pesanan: ');
+
+      const namaAkun = document.createElement('strong');
+      namaAkun.textContent = epicId;
+      pesan.append(namaAkun);
+
+      result.replaceChildren(ikon, pesan);
+      document.querySelector('#aside-account').textContent = epicId;
+    });
+
+    document.querySelector('#topup-form').addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      const epicId = document.querySelector('#epic-id').value.trim();
+      const whatsapp = document.querySelector('#whatsapp').value.trim();
+      const pembayaran = document.querySelector('input[name="payment"]:checked');
+      const total = produkTerpilih.harga + Number(pembayaran.dataset.fee);
+
+      if (!epicId || !whatsapp) {
+        return;
+      }
+
+      document.querySelector('#modal-account').textContent = epicId;
+      document.querySelector('#modal-item').textContent = produkTerpilih.nama;
+      document.querySelector('#modal-payment').textContent = pembayaran.value;
+      document.querySelector('#modal-total').textContent = formatRupiah(total);
+      document.querySelector('#whatsapp-link').href = `https://wa.me/628123456789?text=${encodeURIComponent(
+        `Halo Max Store, saya ingin membeli ${produkTerpilih.nama} Fortnite. Epic Games Display Name: ${epicId}, Pembayaran: ${pembayaran.value}, Total: ${formatRupiah(total)}, WhatsApp: ${whatsapp}`
+      )}`;
+      document.querySelector('#order-modal').hidden = false;
+      document.body.classList.add('modal-open');
+    });
+
+    const closeModal = () => {
+      document.querySelector('#order-modal').hidden = true;
+      document.body.classList.remove('modal-open');
+    };
+
+    document.querySelector('.modal-close').addEventListener('click', closeModal);
+    document.querySelector('#order-modal').addEventListener('click', (event) => {
+      if (event.target.id === 'order-modal') {
+        closeModal();
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Top Up Steam Wallet | Max Store</title>
+	<link rel="stylesheet" href="StyleHtmlGw.css">
+</head>
+<body class="transaction-page">
+	<header class="transaction-header">
+		<div class="transaction-header__inner">
+			<a class="brand" href="Toko.html">
+				<span class="brand-mark">Z</span>
+				<span>Max<span class="brand-accent">Store</span></span>
+			</a>
+
+			<nav class="transaction-nav">
+				<a href="#top-up">Pilih Voucher</a>
+				<a href="#cara-order">Cara Order</a>
+				<a href="#bantuan">Bantuan</a>
+			</nav>
+
+			<div class="header-actions">
+				<a class="back-store" href="Toko.html">← Kembali ke Toko</a>
+				<span class="secure-badge">Transaksi aman</span>
+			</div>
+		</div>
+	</header>
+
+	<main id="transaksi" class="transaction-main">
+		<section class="game-hero">
+			<img class="game-hero__image" src="bahan/Foto/Steam Wallet.jpg" alt="Steam Wallet">
+			<div class="game-hero__overlay"></div>
+			<div class="game-hero__content">
+				<p class="section-kicker">VOUCHER GAME</p>
+				<h1>Steam Wallet</h1>
+				<p>Pilih nominal voucher Steam Wallet. Kode voucher diberikan setelah pembayaran dikonfirmasi.</p>
+				<div class="hero-meta">
+					<span>⚡ Kode dikirim setelah pembayaran</span>
+					<span>✓ Tanpa isi data akun</span>
+				</div>
+			</div>
+		</section>
+
+		<div class="transaction-layout">
+			<form id="topup-form" class="transaction-form">
+				<section class="step-panel" id="top-up">
+					<div class="step-heading">
+						<span class="step-number">01</span>
+						<div>
+							<p class="section-kicker">LANGKAH PERTAMA</p>
+							<h2>Pilih nominal voucher</h2>
+						</div>
+					</div>
+					<p class="step-help">Pilih nominal voucher Steam Wallet yang ingin dibeli. Tidak perlu mengisi data akun Steam.</p>
+					<div class="nominal-grid" id="nominal-grid"></div>
+				</section>
+
+				<section class="step-panel">
+					<div class="step-heading">
+						<span class="step-number">02</span>
+						<div>
+							<p class="section-kicker">LANGKAH KEDUA</p>
+							<h2>Metode pembayaran</h2>
+						</div>
+					</div>
+					<div class="payment-grid">
+						<label class="payment-card is-selected"><input type="radio" name="payment" value="QRIS" data-fee="1000" checked><span class="payment-logo qris">QR</span><span><strong>QRIS</strong><small>Scan semua e-wallet</small></span><i>✓</i></label>
+						<label class="payment-card"><input type="radio" name="payment" value="DANA" data-fee="1500"><span class="payment-logo dana">D</span><span><strong>DANA</strong><small>Saldo DANA</small></span><i>✓</i></label>
+						<label class="payment-card"><input type="radio" name="payment" value="GoPay" data-fee="1500"><span class="payment-logo gopay">G</span><span><strong>GoPay</strong><small>Saldo GoPay</small></span><i>✓</i></label>
+						<label class="payment-card"><input type="radio" name="payment" value="Transfer Bank" data-fee="2500"><span class="payment-logo bank">⌁</span><span><strong>Transfer Bank</strong><small>BNI, BRI, Mandiri</small></span><i>✓</i></label>
+						<label class="payment-card"><input type="radio" name="payment" value="Minimarket" data-fee="3000"><span class="payment-logo mini">M</span><span><strong>Minimarket</strong><small>Alfamart / Indomaret</small></span><i>✓</i></label>
+					</div>
+					<div class="price-summary">
+						<span>Nominal saldo <strong id="item-price">Rp 6.000</strong></span>
+						<span>Biaya admin <strong id="admin-fee">Rp 1.000</strong></span>
+						<span class="price-total">Total pembayaran <strong id="total-price">Rp 7.000</strong></span>
+					</div>
+				</section>
+
+				<section class="step-panel" id="cara-order">
+					<div class="step-heading">
+						<span class="step-number">03</span>
+						<div>
+							<p class="section-kicker">LANGKAH KETIGA</p>
+							<h2>Pesan voucher</h2>
+						</div>
+					</div>
+					<button class="buy-button" type="submit">
+						<span>Beli Voucher</span>
+						<strong id="button-price">Rp 7.000</strong>
+						<b>→</b>
+					</button>
+					<p class="secure-note">Kode voucher akan diberikan melalui WhatsApp setelah pembayaran dikonfirmasi. Jangan pernah bagikan password Steam.</p>
+				</section>
+			</form>
+
+			<aside class="order-aside">
+				<div class="aside-card">
+					<p class="section-kicker">PESANAN KAMU</p>
+					<h2>Steam Wallet</h2>
+					<div class="aside-line"><span>Saldo</span><strong id="aside-item">Rp 6.000</strong></div>
+					<div class="aside-line"><span>Harga item</span><strong id="aside-price">Rp 6.000</strong></div>
+					<div class="aside-line"><span>Pajak / biaya admin</span><strong id="aside-tax">Rp 1.000</strong></div>
+					<div class="aside-line"><span>Produk</span><strong>Voucher digital</strong></div>
+					<div class="aside-line"><span>Pembayaran</span><strong id="aside-payment">QRIS</strong></div>
+					<div class="aside-total"><span>Total</span><strong id="aside-total">Rp 7.000</strong></div>
+				</div>
+
+				<div class="trust-list">
+					<div><span>✓</span><p><strong>Kode voucher</strong><small>Diberikan setelah pembayaran dikonfirmasi</small></p></div>
+					<div><span>✓</span><p><strong>Harga transparan</strong><small>Nominal dan biaya admin terpisah</small></p></div>
+					<div><span>✓</span><p><strong>Tanpa data akun</strong><small>Tidak perlu memberikan akses Steam</small></p></div>
+				</div>
+			</aside>
+		</div>
+	</main>
+
+	<footer id="bantuan" class="transaction-footer">
+		<p>© 2026 Max Store</p>
+		<a href="https://wa.me/628123456789" target="_blank" rel="noreferrer">Butuh bantuan? Chat WhatsApp →</a>
+	</footer>
+
+	<div class="modal-backdrop" id="order-modal" hidden>
+		<div class="order-modal" role="dialog" aria-modal="true">
+			<button class="modal-close" type="button" aria-label="Tutup">×</button>
+			<div class="modal-check">✓</div>
+			<p class="section-kicker">VOUCHER STEAM WALLET</p>
+			<h2>Konfirmasi pembelian</h2>
+			<div class="modal-details">
+				<div><span>Saldo</span><strong id="modal-item"></strong></div>
+				<div><span>Pembayaran</span><strong id="modal-payment"></strong></div>
+				<div><span>Total</span><strong id="modal-total"></strong></div>
+			</div>
+			<a id="whatsapp-link" class="modal-action" href="#" target="_blank" rel="noreferrer">Lanjut ke WhatsApp <span>→</span></a>
+			<p class="modal-note">Lanjutkan pemesanan di WhatsApp. Kode voucher diberikan setelah pembayaran dikonfirmasi.</p>
+		</div>
+	</div>
+
+	<script>
+		const products = [
+			['Steam Wallet Rp 6.000', 6000],
+			['Steam Wallet Rp 12.000', 12000],
+			['Steam Wallet Rp 45.000', 45000],
+			['Steam Wallet Rp 60.000', 60000],
+			['Steam Wallet Rp 90.000', 90000],
+			['Steam Wallet Rp 120.000', 120000],
+			['Steam Wallet Rp 250.000', 250000],
+			['Steam Wallet Rp 400.000', 400000],
+			['Steam Wallet Rp 600.000', 600000]
+		];
+
+		let selected = products[0];
+		const grid = document.querySelector('#nominal-grid');
+
+		const money = (amount) => new Intl.NumberFormat('id-ID', {
+			style: 'currency',
+			currency: 'IDR',
+			maximumFractionDigits: 0
+		}).format(amount).replace('IDR', 'Rp');
+
+		function updateTotals() {
+			const payment = document.querySelector('input[name="payment"]:checked');
+			const fee = Number(payment.dataset.fee);
+			const total = selected[1] + fee;
+
+			document.querySelector('#item-price').textContent = money(selected[1]);
+			document.querySelector('#admin-fee').textContent = money(fee);
+			document.querySelector('#total-price').textContent = money(total);
+			document.querySelector('#button-price').textContent = money(total);
+			document.querySelector('#aside-item').textContent = money(selected[1]);
+			document.querySelector('#aside-price').textContent = money(selected[1]);
+			document.querySelector('#aside-tax').textContent = money(fee);
+			document.querySelector('#aside-payment').textContent = payment.value;
+			document.querySelector('#aside-total').textContent = money(total);
+		}
+
+		grid.innerHTML = products.map((product, index) => `
+			<button type="button" class="nominal-card steam-voucher-card ${index ? '' : 'is-selected'}">
+				<span class="diamond-icon">🎮</span>
+				<span>
+					<strong>Steam Wallet</strong>
+					<small>${index ? 'Voucher digital' : 'Voucher digital · populer'}</small>
+				</span>
+				<b>${money(product[1])}</b>
+			</button>
+		`).join('');
+
+		updateTotals();
+
+		grid.querySelectorAll('.nominal-card').forEach((card, index) => {
+			card.onclick = () => {
+				grid.querySelector('.is-selected').classList.remove('is-selected');
+				card.classList.add('is-selected');
+				selected = products[index];
+				updateTotals();
+			};
+		});
+
+		document.querySelectorAll('.payment-card').forEach((card) => {
+			card.onclick = () => {
+				document.querySelector('.payment-card.is-selected').classList.remove('is-selected');
+				card.classList.add('is-selected');
+				updateTotals();
+			};
+		});
+
+		document.querySelector('#topup-form').onsubmit = (event) => {
+			event.preventDefault();
+
+			const payment = document.querySelector('input[name="payment"]:checked');
+			const total = selected[1] + Number(payment.dataset.fee);
+
+			document.querySelector('#modal-item').textContent = money(selected[1]);
+			document.querySelector('#modal-payment').textContent = payment.value;
+			document.querySelector('#modal-total').textContent = money(total);
+			document.querySelector('#whatsapp-link').href = `https://wa.me/628123456789?text=${encodeURIComponent(
+				`Halo Max Store, saya ingin membeli voucher Steam Wallet. Nominal saldo: ${money(selected[1])}, Pembayaran: ${payment.value}, Total: ${money(total)}. Mohon kirimkan kode voucher setelah pembayaran dikonfirmasi.`
+			)}`;
+			document.querySelector('#order-modal').hidden = false;
+			document.body.classList.add('modal-open');
+		};
+
+		const closeModal = () => {
+			document.querySelector('#order-modal').hidden = true;
+			document.body.classList.remove('modal-open');
+		};
+
+		document.querySelector('.modal-close').onclick = closeModal;
+		document.querySelector('#order-modal').onclick = (event) => {
+			if (event.target.id === 'order-modal') {
+				closeModal();
+			}
+		};
+	</script>
+</body>
+</html>
